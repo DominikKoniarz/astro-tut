@@ -1,0 +1,22 @@
+---
+type NavigationLinks = {
+    text: string;
+    href: string;
+};
+
+const links: NavigationLinks[] = [
+    { text: "Home", href: "/" },
+    { text: "About", href: "/about/" },
+    { text: "Blog", href: "/blog/" },
+];
+---
+
+<ul class="flex list-none flex-row gap-1.5">
+    {
+        links.map((link) => (
+            <li>
+                <a href={link.href}>{link.text}</a>
+            </li>
+        ))
+    }
+</ul>
